@@ -15,7 +15,7 @@ export default defineConfigWithVueTs(
     // Add the rules property here to override the default Vue rules
     rules: {
       // Disable the multi-word rule because file-based routing uses single-word names (e.g., index)
-      'vue/multi-word-component-names': 'off'
+      'vue/multi-word-component-names': 0
     }
   },
 
