@@ -12,11 +12,16 @@ export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
+    // Add the rules property here to override the default Vue rules
+    rules: {
+      // Disable the multi-word rule because file-based routing uses single-word names (e.g., index)
+      'vue/multi-word-component-names': 'off'
+    }
   },
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
-  skipFormatting,
+  skipFormatting
 )
