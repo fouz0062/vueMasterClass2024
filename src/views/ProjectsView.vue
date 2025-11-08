@@ -3,7 +3,7 @@
 <template>
   <div>
     <h1>Projects Page</h1>
-    <a href="/"></a>
+    <RouterLink to="/">Home</RouterLink>
   </div>
 </template>
 
